@@ -12,8 +12,6 @@ import java.awt.*;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +20,13 @@ public class Car {
     private String mark;
     private String model;
     private Color color;
+
+    public Car(String mark, String model, Color color) {
+        this.mark = mark;
+        this.model = model;
+        this.color = color;
+    }
+
+    public Car() {
+    }
 }
